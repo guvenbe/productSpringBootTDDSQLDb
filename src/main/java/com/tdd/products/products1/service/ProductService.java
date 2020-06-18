@@ -1,7 +1,7 @@
-package com.tdd.products.products.service;
+package com.tdd.products.products1.service;
 
-import com.tdd.products.products.repository.ProductRepository;
-import com.tdd.products.products.model.Product;
+import com.tdd.products.products1.repository.ProductRepository;
+import com.tdd.products.products1.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.apache.logging.log4j.LogManager;

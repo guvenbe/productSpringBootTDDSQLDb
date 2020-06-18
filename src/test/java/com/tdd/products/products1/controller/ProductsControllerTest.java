@@ -1,9 +1,10 @@
-package com.tdd.products.products.controller;
+package com.tdd.products.products1.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tdd.products.products.model.Product;
-import com.tdd.products.products.service.ProductService;
+import com.tdd.products.products1.model.Product;
+import com.tdd.products.products1.service.ProductService;
 import org.junit.jupiter.api.DisplayName;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
@@ -40,7 +41,7 @@ public class ProductsControllerTest {
     @DisplayName("Test product found - GET /products/1")
     public void testGetProductByIdFindsProduct() throws Exception {
         // Prepare mock product
-        Product mockProduct = new Product(1,"My product", "Details of my product", 5, 1);
+        Product mockProduct = new Product(1, "My product", "Details of my product", 5, 1);
 
         // Prepare mocked service method
         doReturn(mockProduct).when(productService).findById(mockProduct.getId());
@@ -52,7 +53,7 @@ public class ProductsControllerTest {
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
 
                 // Validate response headers
-                .andExpect(header().string(HttpHeaders.ETAG,  "\"1\""))
+                .andExpect(header().string(HttpHeaders.ETAG, "\"1\""))
                 .andExpect(header().string(HttpHeaders.LOCATION, "/products/1"))
 
                 // Validate response body
@@ -171,7 +172,7 @@ public class ProductsControllerTest {
 
     @Test
     @DisplayName("Product not found while updating - PUT /products/1")
-    public void testProductNotFoundWhileUpdating() throws Exception{
+    public void testProductNotFoundWhileUpdating() throws Exception {
         // Prepare mock product
         Product productToUpdate = new Product("New name", "New description", 20);
 

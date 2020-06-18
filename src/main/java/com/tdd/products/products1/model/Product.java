@@ -1,4 +1,4 @@
-package com.tdd.products.products.model;
+package com.tdd.products.products1.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

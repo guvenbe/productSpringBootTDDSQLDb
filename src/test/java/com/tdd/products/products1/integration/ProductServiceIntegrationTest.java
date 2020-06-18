@@ -1,8 +1,8 @@
-package com.tdd.products.products.integration;
+package com.tdd.products.products1.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tdd.products.products.model.Product;
-import com.tdd.products.products.repository.ProductRepository;
+import com.tdd.products.products1.model.Product;
+import com.tdd.products.products1.repository.ProductRepository;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

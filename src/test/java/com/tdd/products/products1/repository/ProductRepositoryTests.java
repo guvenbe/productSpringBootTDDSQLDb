@@ -1,10 +1,12 @@
-package com.tdd.products.products.repository;
+package com.tdd.products.products1.repository;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tdd.products.products.model.Product;
+import com.tdd.products.products1.model.Product;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -15,6 +17,7 @@ import java.util.Arrays;
 
 @ExtendWith({SpringExtension.class})
 @SpringBootTest
+@AutoConfigureMockMvc
 public class ProductRepositoryTests {
 
     @Autowired

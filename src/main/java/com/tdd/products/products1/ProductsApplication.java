@@ -1,7 +1,7 @@
-package com.tdd.products.products;
+package com.tdd.products.products1;
 
-import com.tdd.products.products.model.Product;
-import com.tdd.products.products.service.ProductService;
+import com.tdd.products.products1.model.Product;
+import com.tdd.products.products1.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
