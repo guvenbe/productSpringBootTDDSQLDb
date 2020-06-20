@@ -41,6 +41,20 @@ public class ProductRepositoryTests {
     }
 
     @Test
+    @DisplayName("Test produc with Id retrieved successfully")
+    public void testProductWithIdRetreivedSucessfully(){
+        //Giveb
+
+        //When
+        Product retrievedProduct = productRepository.findProductById(1);
+
+        //Then
+        Assertions.assertNotNull(retrievedProduct,"Product with Id 1 should exist");
+        Assertions.assertEquals("First Product", retrievedProduct.getName());
+
+    }
+
+    @Test
     @DisplayName("Test product not found with non-existing id")
     public void testProductNotFoundForNonExistingId(){
         // Given two products in the database
