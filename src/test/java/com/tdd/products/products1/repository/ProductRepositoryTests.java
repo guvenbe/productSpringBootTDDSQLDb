@@ -92,8 +92,8 @@ public class ProductRepositoryTests {
 
         // Then
         Assertions.assertEquals(productToUpdate.getName(), updatedProduct.getName());
-        Assertions.assertEquals(2, updatedProduct.getVersion());
-        Assertions.assertEquals(20, updatedProduct.getQuantity());
+        Assertions.assertEquals(java.util.Optional.of(2), updatedProduct.getVersion());
+        Assertions.assertEquals(java.util.Optional.of(20), updatedProduct.getQuantity());
     }
 
     @Test
